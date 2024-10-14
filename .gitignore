@@ -1,0 +1,6 @@
+#Ignorar la carpeta de node js utilizadas 
+node_modules
+#Igonrar la carpeta de uploads para no subir la imagenes guardas
+uploads
+#Igonrar la carpeta de imagenes+camisas para no subir la imagenes guardas
+imagenes+camisas
