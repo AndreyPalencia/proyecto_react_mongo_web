@@ -19,12 +19,15 @@ connectDB()
 
 //Habilitar Body-Parser
 app.use(bodyParse.json());
-app.use(bodyParse.urlencoded({extended:true}))
+app.use(bodyParse.urlencoded({extended:true}));
 
 //Agregamos las rutas
 app.use('/', routes());
 
 //Puerto del servidor
-const PORT = 3000
 
-app.listen(PORT);
+const PORT = 3000;
+
+app.listen(PORT, () => {
+    console.log('Se le realizo la conexion. %d ', PORT)
+});

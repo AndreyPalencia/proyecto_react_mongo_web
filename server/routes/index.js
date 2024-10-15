@@ -22,7 +22,7 @@ module.exports = function () {
     /* Productos */
 
     //Agregar un nuevo producto
-    router.post('/productos', productosController.subirArchivo,  productosController.nuevoProducto);
+    router.post('/productos', productosController.subirArchivo, productosController.nuevoProducto);
     //Mostrar productos 
     router.get('/productos/all', productosController.mostarProductos);
     //Mostrar producto por [ID]
@@ -33,6 +33,15 @@ module.exports = function () {
     router.delete('/productos/:idProducto', productosController.eleminarProducto);
 
     /* Pedidos */
-
+    //Agregar un nuevo Pedido
+    router.post('/pedidos', pedidosController.nuevoPedido);
+    //Mostrar los pedidos 
+    router.get('/pedidos', pedidosController.mostrarPedidos);
+    //Mostrar pedido por [ID]
+    router.get('/pedidos/:idPedido', pedidosController.mostrarPedido);
+    //Actualizar pedido por [ID]
+    router.put('/pedidos/:idPedido', pedidosController.actulizarPedido);
+    //Eliminar un pedido por [ID]
+    router.delete('/pedidos/:idPedido', pedidosController.eliminarPedido);
     return router;
 }

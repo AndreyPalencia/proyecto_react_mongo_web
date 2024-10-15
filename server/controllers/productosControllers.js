@@ -38,7 +38,7 @@ exports.subirArchivo = (req, res, next) => {
         return next();
     });
 }
-
+//Agregar un nuevo producto
 exports.nuevoProducto = async (req, res, next) => {
     const producto = new ProductosSena(req.body);
     try {
